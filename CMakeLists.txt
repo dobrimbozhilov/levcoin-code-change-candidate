@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 2.8.6)
 if (WIN32)
  option(CMAKE_USE_WIN32_THREADS_INIT "using WIN32 threads" ON)
- SET (BOOST_ROOT "../boost")
- SET (BOOST_LIBRARYDIR "../boost/stage/lib")
 endif()
 set(VERSION "0.1")
 
