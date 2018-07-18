@@ -307,7 +307,7 @@ std::string get_nix_version_display_string()
 
 #ifdef _WIN32
     // Windows
-    config_folder = get_special_folder_path(CSIDL_APPDATA, true) + "/" + CryptoNote::CRYPTONOTE_NAME;
+	config_folder = "./Data";
 #ifdef USE_LITE_WALLET
     config_folder = "./";
 #endif
