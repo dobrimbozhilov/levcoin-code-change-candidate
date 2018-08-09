@@ -52,7 +52,7 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 //TODO Define number of blocks for block size median calculation
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 100000;
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 512000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 1000000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
@@ -90,7 +90,7 @@ const size_t   FUSION_TX_MAX_SIZE                            = CRYPTONOTE_BLOCK_
 const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 290000;
+const uint32_t UPGRADE_HEIGHT_V2                             = 215000;
 const uint32_t UPGRADE_HEIGHT_V3                             = 300000;
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90; // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
@@ -151,6 +151,7 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
+	"pool.mydevstand.com:21724"
 	"pool.levcoin.net:21724",
 	"spock.levcoin.net:21724",
 	"35.197.245.43:21724",
@@ -179,7 +180,7 @@ const std::initializer_list<CheckpointData> CHECKPOINTS = {
 	{120000, "0f53c5ae29e51cd84580118f0074a7a3e243056c8bbfc533c718367515d556be"},
 	{140000, "373256273ff4bd5c34ce9260931f9da815ca8237aa9491589e02245a8b4464b0"},
 	{160000, "0955630ea72030f0f2ec488f6e73935ef2a37e95491ec58c741c5bc1d985b215"},
-	{179000, "0772e16dddc9fb4e48cf9eb2db6b80838fe33e7d3e6f03383972504607a2d6d8"},
+	{180000, "b8f899caff402eb93c5d77ea2b4626ac1a8cf5f617d6d705612ed50777047b72"},
 	{290000, "0872e16dddc9fb4e48cf9eb2db6b80838fe33e7d3e6f03383972504607a2d6d8"},
 };
 } // CryptoNote
